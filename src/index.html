@@ -8,26 +8,31 @@
 <body>
     <h1>Validation form</h1>
     <div class="container">
-        <form novalidate action="#">
+        <form action="#">
             <p>
-                <label for="email">Email: </label>
+                <label for="email">*Email: </label>
                 <input type="email" id="email">
             </p>
+            <span id="emailSpan"></span>
             <p>
-                <label for="country">Country: </label>
+                <label for="country">*Country: </label>
                 <input type="text" id="country">
             </p>
+            <span id="countrySpan"></span>
             <p>
-                <label for="zipCode">Zip Code: </label>
+                <label for="zipCode">*Zip Code: </label>
                 <input type="text" id="zipCode">
             </p>
+            <span id="zipCodeSpan"></span>
             <p>
-                <label for="password">Password: </label>
+                <label for="password">*Password: </label>
                 <input type="password" id="password">
             </p>
+            <span id="passwordSpan"></span>
             <p>
-                <label for="confPassword">Confirm your password: </label>
+                <label for="confPassword">*Confirm your password: </label>
                 <input type="password" id="confPassword">
+                <span id="confPasswordSpan"></span>
             </p>
             <button id="submitBtn" type="submit">submit</button>
         </form>

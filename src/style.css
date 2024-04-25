@@ -2,11 +2,6 @@ h1 {
    text-align: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-  }
-
 form {
     display: flex;
     flex-direction: column;
@@ -21,4 +16,27 @@ form > p {
 
 button {
     width: 60px;
+}
+
+span {
+    text-align: end;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border-radius: 3px;
+    border: solid 1px;
+    border-color: gray;
+    background-color: whitesmoke;
+}
+
+input:invalid {
+    border-radius: 3px;
+    border: solid 1px;
+    border-color: #900;
+    background-color: #fdd;
 }
