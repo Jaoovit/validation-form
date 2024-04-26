@@ -34,7 +34,12 @@ input {
     background-color: whitesmoke;
 }
 
-input:invalid {
+span {
+    color: #900;
+    font-size: smaller;
+}
+
+.invalid {
     border-radius: 3px;
     border: solid 1px;
     border-color: #900;
