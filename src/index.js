@@ -77,6 +77,21 @@ function validatePassword() {
   }
 }
 
+//confirm password
+
+const confPassword = document.querySelector("#confPassword");
+const confPasswordSpan = document.querySelector("#confPasswordSpan");
+
+function confirmPassword() {
+  if (password.value != confPassword.value) {
+    confPasswordSpan.textContent = "Password mismatch";
+    confPassword.className = "invalid";
+  } else {
+    confPasswordSpan.textContent = "";
+    confPassword.className = "";
+  }
+}
+
 //send forms
 
 const submitBtn = document.querySelector("#submitBtn");
@@ -85,4 +100,5 @@ submitBtn.addEventListener("click", () => {
   validateEmail();
   validateZipCode();
   validatePassword();
+  confirmPassword();
 });
