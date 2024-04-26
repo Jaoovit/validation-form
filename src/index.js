@@ -40,14 +40,40 @@ function validateZipCode() {
   } else if ((country.value == "United States") & (usValidaty == false)) {
     zipCodeSpan.textContent = "Enter a zipcode with a valid format";
     zipCode.className = "invalid";
-    console.log("USA");
   } else if ((country.value == "United Kingdom") & (ukValidaty == false)) {
     zipCodeSpan.textContent = "Enter a zipcode with a valid format";
     zipCode.className = "invalid";
-    console.log("UK");
   } else {
     zipCodeSpan.textContent = "";
     zipCode.className = "";
+  }
+}
+
+//validation password
+
+const password = document.querySelector("#password");
+const passwordSpan = document.querySelector("#passwordSpan");
+const passwordPatter =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]/;
+
+function validatePassword() {
+  let passwordValidaty = passwordPatter.test(password.value);
+  if (password.value.length == 0) {
+    passwordSpan.textContent = "This field is required";
+    password.className = "invalid";
+  } else if (password.value.length < 6) {
+    passwordSpan.textContent = "Your password is too short";
+    password.className = "invalid";
+  } else if (password.value.length > 16) {
+    passwordSpan.textContent = "Your password is too long";
+    password.className = "invalid";
+  } else if (passwordValidaty == false) {
+    passwordSpan.innerHTML =
+      "Your password must be at least: <p>One lowercase alphabet</p><p>One uppercase alphabet</p><p>One Numeric digit</p><p>One special character</p>";
+    password.className = "invalid";
+  } else {
+    passwordSpan.textContent = "";
+    password.className = "";
   }
 }
 
@@ -58,4 +84,5 @@ const submitBtn = document.querySelector("#submitBtn");
 submitBtn.addEventListener("click", () => {
   validateEmail();
   validateZipCode();
+  validatePassword();
 });
