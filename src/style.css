@@ -27,7 +27,7 @@ span {
     justify-content: center;
 }
 
-input {
+input, select {
     border-radius: 3px;
     border: solid 1px;
     border-color: gray;
